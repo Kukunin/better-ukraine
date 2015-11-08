@@ -9,6 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+sprockets.append_path File.join(root, 'vendor/assets/bower')
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
