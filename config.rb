@@ -52,4 +52,13 @@ helpers do
       link_to(link, url, opts)
     end
   end
+
+  def page_url
+    "http://better-ukraine.eu/#{current_page.path}"
+  end
+
+  def page_id
+    # 32bit integer based on page_url
+    page_url.hash % 0xffffffff
+  end
 end
