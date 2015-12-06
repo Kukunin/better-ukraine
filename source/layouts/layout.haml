@@ -14,6 +14,11 @@
       .row
         .col-sm-8
           = yield
-        %aside.col-sm-4
-          %h3 Стисло про закони
-          %a{href: '/laws/citizens-appeals.html'} Про звернення громадян
+        .col-sm-4
+          %aside(data-spy="affix")
+            %ul.nav.nav-pills.nav-stacked
+              = nav_link_to('Головна', '/index.html')
+            .navigation
+              %h3 Стисло про закони
+              %ul.nav.nav-pills.nav-stacked
+                = nav_link_to('Про звернення громадян', '/laws/citizens-appeals.html')

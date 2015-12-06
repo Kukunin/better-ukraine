@@ -42,3 +42,14 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 end
+
+helpers do
+  def nav_link_to(link, url, opts = {})
+    li_opts = {}
+    li_opts[:class] = 'active' if "/#{current_page.path}" == url
+
+    content_tag :li, li_opts do
+      link_to(link, url, opts)
+    end
+  end
+end
