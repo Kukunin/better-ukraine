@@ -22,17 +22,9 @@ sprockets.append_path File.join(root, 'vendor/assets/bower')
 # Helpers
 ###
 
-# Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+end
 
 # Build-specific configuration
 configure :build do
