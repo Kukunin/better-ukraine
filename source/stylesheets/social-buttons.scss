@@ -1,5 +1,9 @@
+$disqus-border-color: rgba(0,39,59,.08);
+
 .likes {
   display: flex;
   justify-content: space-between;
-  margin: 2em 0;
+  padding: 2em 0;
+  border: 0px solid $disqus-border-color;
+  border-width: 2px 0;
 }

@@ -14,7 +14,8 @@
     .container
       .row
         .col-sm-8
-          = yield
+          %main
+            = yield
           = partial('shared/social-buttons')
           = partial('shared/disqus')
         .col-sm-4
