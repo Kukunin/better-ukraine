@@ -1,0 +1,11 @@
+%aside
+  %nav.aside-block
+    %h3 Навігація
+    %ul
+      = nav_link_to('Головна', '/index.html')
+      = nav_link_to('Закон Про звернення громадян', '/laws/citizens-appeals.html')
+
+  = yield_content :aside
+
+  %p.aside-block
+    %a.text-muted{href: '#top'} На початок

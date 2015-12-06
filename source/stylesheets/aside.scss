@@ -1,0 +1,10 @@
+aside {
+  position: fixed;
+}
+.aside-block {
+  & + .aside-block {
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+  }
+}

@@ -1,8 +1,18 @@
 ---
 title: Стисло про Закон України Про звернення громадян - Краща Україна
 ---
+- content_for :aside do
+  #details-level.aside-block
+    %h3 Деталізація
+    %p.btn-group(role="group" aria-label="Деталізація"  data-toggle="buttons")
+      %label.btn.btn-default.active
+        %input(type="radio" name="details_level" value="addClass" autocomplete="off" checked)
+        Стисло
+      %label.btn.btn-default
+        %input(type="radio" name="details_level" value="removeClass" autocomplete="off")
+        Увесь текст
 
-%article.law
+%article.law.only-important
   %header
     %h2
       %img.emblem{src: 'http://zakonst.rada.gov.ua/images/gerb.gif', alt: 'Герб'}
