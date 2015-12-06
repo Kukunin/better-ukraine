@@ -1,0 +1,48 @@
+.law {
+  font-weight: 300;
+
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  h2 + h1 {
+    margin-top: 0;
+  }
+
+  p.note {
+    font-style: italic;
+  }
+
+  header {
+    h1, h2 {
+      text-align: center;
+    }
+    img.emblem {
+      display: block;
+      margin: 0 auto 0.5em;
+    }
+  }
+
+  .section {
+    margin-bottom: 2em;
+  }
+
+  .important {
+    background-color: rgba(255, 255, 0, 0.2);
+  }
+
+  &.only-important {
+    .chapter:not(.has-important),
+    .section:not(.important):not(.has-important),
+    .chapter > p:not(.important),
+    .section:not(.important) p:not(.important),
+    p.note {
+      display: none;
+    }
+
+    .important {
+      background-color: transparent;
+    }
+  }
+}

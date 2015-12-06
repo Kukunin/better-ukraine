@@ -10,4 +10,10 @@
     = javascript_include_tag :all
 
   %body{class: page_classes}
-    = yield
+    .container
+      .row
+        .col-sm-8
+          = yield
+        %aside.col-sm-4
+          %h3 Стисло про закони
+          %a{href: '/laws/citizens-appeals.html'} Про звернення громадян
