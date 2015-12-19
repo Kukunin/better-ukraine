@@ -1,0 +1,11 @@
+.github-link {
+  img {
+    position: absolute;
+    top: 0; right: 0;
+    border: 0;
+
+    @media (min-width: $screen-sm-min) {
+      position: fixed;
+    }
+  }
+}
