@@ -1,5 +1,7 @@
-aside {
-  position: fixed;
+@media (min-width: $screen-sm-min) {
+  aside {
+    position: fixed;
+  }
 }
 .aside-block {
   & + .aside-block {
