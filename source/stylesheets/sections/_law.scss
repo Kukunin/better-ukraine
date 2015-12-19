@@ -36,13 +36,41 @@
     .chapter:not(.has-important),
     .section:not(.important):not(.has-important),
     .chapter > p:not(.important),
-    .section:not(.important) p:not(.important),
+    .section:not(.important):not(.expanded) p:not(.important),
     p.note {
       display: none;
     }
 
-    .important {
+    .section:not(.expanded) p.important,
+    .section.important:not(.expanded) {
       background-color: transparent;
+    }
+
+    .section {
+      position: relative;
+
+      .expand-knob {
+        display: none;
+        cursor: pointer;
+        font-size: 0.8em;
+        padding: 0.5em;
+        margin: -0.5em;
+        margin-left: 0.5em;
+
+        @extend .glyphicon;
+        @extend .glyphicon-resize-full;
+      }
+      &:not(.important):hover,
+      &.expanded {
+        .expand-knob {
+          display: inline-block;
+        }
+      }
+      &.expanded {
+        .expand-knob {
+          @extend .glyphicon-resize-small;
+        }
+      }
     }
   }
 }

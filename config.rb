@@ -10,6 +10,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 
 sprockets.append_path File.join(root, 'vendor/assets/bower')
+sprockets.append_path File.join(root, 'vendor/assets/bower/bootstrap-sass/assets/fonts')
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
