@@ -9,6 +9,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :sprockets
+
 sprockets.append_path File.join(root, 'vendor/assets/bower')
 
 # With alternative layout
@@ -38,7 +40,7 @@ end
 helpers do
   def nav_link_to(link, url, opts = {})
     li_opts = {}
-    li_opts[:class] = 'active' if "/#{current_page.path}" == url
+    li_opts[:class] = 'active' if url == "/#{current_page.path}"
 
     content_tag :li, li_opts do
       link_to(link, url, opts)
