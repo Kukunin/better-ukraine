@@ -9,10 +9,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-activate :sprockets
-
-sprockets.append_path File.join(root, 'vendor/assets/bower')
-
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
@@ -24,10 +20,6 @@ sprockets.append_path File.join(root, 'vendor/assets/bower')
 # Helpers
 ###
 
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-end
-
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
@@ -36,6 +28,15 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 end
+
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? 'yarn run build' : 'yarn run start',
+         source: '.tmp/dist',
+         latency: 1
+
+config[:js_dir] = 'assets/javascripts'
+config[:css_dir] = 'assets/stylesheets'
 
 helpers do
   def nav_link_to(link, url, opts = {})

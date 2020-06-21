@@ -9,9 +9,7 @@ gem 'wdm', '~> 0.1.0', platforms: %i[mswin mingw]
 gem 'tzinfo-data', platforms: %i[mswin mingw jruby]
 
 # Middleman Gems
-gem 'middleman', '~> 4.2.1'
-gem 'middleman-autoprefixer', '~> 2.9'
-gem 'middleman-sprockets', '~> 4.1.1'
+gem 'middleman', '~> 4.3.7'
 
 # Deployment
 gem 'mina'
